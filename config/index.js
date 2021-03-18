@@ -5,7 +5,7 @@ const config = {
     port: process.env.PORT || 8080,
     host: process.env.HOST || "0.0.0.0",
     apikey: process.env.TONE_ANALYZER_HP_APIKEY,
-    serviceUrl: process.env.TONE_ANALYZER_HP_APIKEY_URL
+    serviceUrl: process.env.TONE_ANALYZER_HP_URL
 }
 
 module.exports = { config };
