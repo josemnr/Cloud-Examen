@@ -21,17 +21,19 @@ exports.sendData = (req, res) => {
     const toneParams = {
         toneInput: { 'text': text },
         contentType: 'application/json',
-      };
+    };
       
-      toneAnalyzer.tone(toneParams)
-        .then(toneAnalysis => {
-          console.log(JSON.stringify(toneAnalysis, null, 2));
-        })
-        .catch(err => {
-          console.log('error:', err);
+    toneAnalyzer.tone(toneParams)
+    .then(toneAnalysis => {
+    //   console.log(JSON.stringify(toneAnalysis, null, 2));
+        res.render("index", {
+            response:JSON.stringify(toneAnalysis, null, 2)
         });
-
-    res.render("index", {
-        text
+    })
+    .catch(err => {
+        console.log('error:', err);
+        res.render("index", {
+            response:JSON.stringify(err, null, 2)
+        });
     });
 }
