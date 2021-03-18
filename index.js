@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 const {config} = require('./config');
-const {
-   homePageRouter,
-} = require('./src/routes');
+const homePageRouter = require('./src/routes/home_page');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
