@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen</title>
+    <link rel="stylesheet" href="/assets/styles/styles.css">
 </head>
 <body>
-    <form action="/" method="POST">
-        <input name="entry" type="text"><br>
-        <button>Go</button>
+    <h1 id="pageTitle">Tone Analyzer</h1>
+    <form class="toneAnalyzer__Form" action="/" method="POST">
+        <input name="entry" class="toneAnalyzer__Form__input" type="text"><br>
+        <button class="toneAnalyzer__Form__button">Go</button>
     </form>
     <span>
         {{response}}
