@@ -1,12 +1,13 @@
+const {config} = require('../../config');
 const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
 const { IamAuthenticator } = require('ibm-watson/auth');
 
 const toneAnalyzer = new ToneAnalyzerV3({
   version: '{version}',
   authenticator: new IamAuthenticator({
-    apikey: '{apikey}',
+    apikey: config.apikey,
   }),
-  serviceUrl: '{url}',
+  serviceUrl: config.serviceUrl,
 });
 
 //Método para render de la página del Adder
